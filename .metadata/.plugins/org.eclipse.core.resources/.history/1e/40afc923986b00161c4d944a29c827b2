@@ -1,0 +1,80 @@
+package com.niit.music.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.niit.music.model.Product;
+import com.niit.music.model.product;
+
+@Repository
+@Transactional
+public class ProductDaoImpl implements ProductDao {
+@Autowired
+private SessionFactory session;
+	
+	@Override
+	public void add(Product productModel) {
+		session.getCurrentSession().save(productModel);
+	}
+
+	@Override
+	public void edit({Product productModel) {
+		session.getCurrentSession().update(productModel);
+		
+	}
+
+	@Override
+	public void delete(String getId) {
+		session.getCurrentSession().delete(getProduct.(getId));
+	}
+
+	@Override
+	public Product getproduct(String getId) {
+		return (Product)session.getCurrentSession().get(Product.class,getId);
+	}
+
+	@Override
+	public List getAllProductModel() {
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD").list();
+	}
+/*
+	@Override
+	public List getAllHeadPhones() {
+		// TODO Auto-generated method stub
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD where category='Headphones'").list();
+	}
+
+	@Override
+	public List getAllCases() {
+		// TODO Auto-generated method stub
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD where category='Cases'").list();
+	}
+
+	@Override
+	public List getAllChargers() {
+		// TODO Auto-generated method stub
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD where category='Chargers'").list();
+	}
+
+	@Override
+	public List getAllScreenGuard() {
+		// TODO Auto-generated method stub
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD where category='Screenguards'").list();
+	}
+
+	@Override
+	public List getAllCables() {
+		// TODO Auto-generated method stub
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD where category='Cables'").list();
+	}
+
+	@Override
+	public List getAllStorge() {
+		// TODO Auto-generated method stub
+		return session.getCurrentSession().createQuery("from PRODUCTUPLOAD where category='Storage'").list();
+	}*/
+}

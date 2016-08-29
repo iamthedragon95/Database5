@@ -1,0 +1,123 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+       <%@ include file="/WEB-INF/views/includes.jsp"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="Stylesheet"
+	href="<c:url value="/resources/css/bootstrap.min.css"/>">
+<link rel="Stylesheet" href="<c:url value="/resources/css/custom.css"/>">
+<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+<script src="<c:url value="/resources/js/jquery.1.10.2.min.js" />"></script>
+<script src="<c:url value="/resources/js/main.js" />"></script>
+<spring:url value="/resources/css/main.css" var="mainCss" />
+<spring:url value="/resources/js/jquery.1.10.2.min.js" var="jqueryJs" />
+<spring:url value="/resources/js/main.js" var="mainJs" />
+<script src="<c:url value="/resources/js/respond.js"/>"></script>
+<title>Product Form</title>
+<style>
+.margin50
+{
+    margin-top:50px
+}
+.dimentions-width, .dimentions-height
+{
+    width:90%;
+    display:initial;
+}
+</style>
+</head>
+<body>
+<%@ include file="/WEB-INF/views/navi.jsp"%>
+<form:form action="products.do" method="POST" enctype="multipart/form-data" commandName="product">>
+  <fieldset>
+    <div class="col-lg-12 form-group margin50">
+      <label class="col-lg-2"  for="ProductId">ProductId</label>
+      <div class="col-lg-4">
+        <input type="text" id="name" name="ProductId" placeholder="" class="form-control ProductId">
+      </div>
+    </div>
+    <div class=" col-lg-12 form-group">
+      <label class="col-lg-2" for="Name">Name</label>
+      <div class="col-lg-4">
+      <input type="text" id="name" name="Name" placeholder="" class="form-control Name">
+       
+      </div>
+    </div>
+     <div class="col-lg-12 form-group">
+      <label class="col-lg-2" for="Price">Price</label>
+      <div class="col-lg-4">
+      <input type="text" id="name" name="Price" placeholder="" class="form-control Price">
+       
+       
+      </div>
+    </div>
+    
+    <div class="col-lg-12 form-group">
+      <label class="col-lg-2" for="Description">Description</label>
+      <div class="col-lg-4">
+      <input type="text" id="name" name="Description" placeholder="" class="form-control Description">
+        
+       
+      </div>
+    </div>
+     <div class="col-lg-12 form-group">
+      <label class="col-lg-2" for="Category">Category</label>
+      <div class="col-lg-4">
+        <select id="Category" name="Category" class="form-control Category">
+            <option value="0">violins</option>
+            <option value="1">Drums</option>
+            <option value="2">Guitars</option>
+        </select>
+      </div>
+    </div>
+      <div id="Product_Images" class="tab-pane"><div class="col-lg-12 form-group margin50">
+    <label class="col-sm-2" for="Imagename">Imagename</label>
+    <div class="col-sm-4">
+      <input class="form-control" type="text" id="Imagename" placeholder="">
+    </div>
+  </div>
+              <div class="col-lg-12 form-group">
+                <label class="col-sm-2" for="exampleInputFile">Small</label>
+                <div class="col-sm-4">
+                <input type="file" id="small">
+              </div>
+              </div>
+              
+              <div class="col-lg-12 form-group">
+                <label class="col-sm-2" for="exampleInputFile">Medium</label>
+                <div class="col-sm-4">
+                <input type="file" id="medium">
+              </div>
+              </div>
+              
+              <div class="col-lg-12 form-group">
+                <label class="col-sm-2" for="exampleInputFile">Large</label>
+                <div class="col-sm-4">
+                <input type="file" id="large">
+              </div>
+              </div>
+          <tr>
+			<td colspan="2">
+				<input type="submit" name="action" value="Save" />
+				<input type="submit" name="action" value="Update" />
+				<input type="submit" name="action" value="Delete" />
+				<input type="submit" name="action" value="Search" />
+			</td>
+		</tr>
+ </fieldset>
+ </form:form>
+<a href= "product view" > View Here</a>
+<%@ include file="/WEB-INF/views/footer.jsp"%>
+
+
+</body>
+</html>

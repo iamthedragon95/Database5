@@ -1,0 +1,72 @@
+package com.niit.music.controller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.niit.music.model.Product;
+import com.niit.music.service.ProductService;
+
+@Controller
+public class CategoryController {
+	@Autowired
+	private ProductService productservice;
+	
+/*	@RequestMapping(value={"/admin/Headphones","/Headphones"})
+	public String head(Map<String, Object> map)
+	{
+		Product productmodelResult=new Product();
+		map.put("productModel",productmodelResult);
+	    map.put("productmodelList", productservice.getAllHeadPhones());
+	  System.out.println(productmodelResult);
+		return "Category";
+	}
+	@RequestMapping(value={"/admin/Chargers","/Chargers"})
+	public String Crg(Map<String, Object> map)
+	{
+		ProductModel productmodelResult=new ProductModel();
+		map.put("productModel",productmodelResult);
+	    map.put("productmodelList", productservice.getAllChargers());
+	  System.out.println(productmodelResult);
+		return "Category";
+	}
+	@RequestMapping(value={"/admin/screen","/screen"})
+	public String head2(Map<String, Object> map)
+	{
+		ProductModel productmodelResult=new ProductModel();
+		map.put("productModel",productmodelResult);
+	    map.put("productmodelList", productservice.getAllScreenGuard());
+	  System.out.println(productmodelResult);
+		return "Category";
+}
+	@RequestMapping(value={"/cables","/admin/cables"})
+	public String head3(Map<String, Object> map)
+	{
+		ProductModel productmodelResult=new ProductModel();
+		map.put("productModel",productmodelResult);
+	    map.put("productmodelList", productservice.getAllCables());
+	  System.out.println(productmodelResult);
+		return "Category";
+}
+	@RequestMapping(value={"/admin/memory","memory"})
+	public String head4(Map<String, Object> map)
+	{
+		ProductModel productmodelResult=new ProductModel();
+		map.put("productModel",productmodelResult);
+	    map.put("productmodelList", productservice.getAllStorge());
+	  System.out.println(productmodelResult);
+		return "Category";
+}
+	@RequestMapping(value={"/admin/cases","cases"})
+	public String head5(Map<String, Object> map)
+	{
+		ProductModel productmodelResult=new ProductModel();
+		map.put("productModel",productmodelResult);
+	    map.put("productmodelList", productservice.getAllCases());
+	  System.out.println(productmodelResult);
+		return "Category";	
+}*/
+
+}
